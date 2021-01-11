@@ -1,4 +1,5 @@
 import json
+import requests
 
 def main():
     filePath = '/Users/hewenjie/Desktop/江南.txt'
@@ -64,10 +65,10 @@ def main():
     # print('程序执行结束')
 
     #把字典或列表以JSON格式保存到文件中
-    #   dump - 将Python对象按照JSON格式序列化到文件中
-    #   dumps - 将Python对象处理成JSON格式的字符串
-    #   load - 将文件中的JSON数据反序列化成对象
-    #   loads - 将字符串的内容反序列化成Python对象
+      # dump - 将Python对象按照JSON格式序列化到文件中
+      # dumps - 将Python对象处理成JSON格式的字符串
+      # load - 将文件中的JSON数据反序列化成对象
+      # loads - 将字符串的内容反序列化成Python对象
     # dic = {
     #     "name" : "凌峰",
     #     "age" : 38,
@@ -81,6 +82,18 @@ def main():
     # except IOError as e:
     #     print(e)
     # print('保存数据完成')
+
+    #get和post请求
+    # resp = requests.get('http://api.tianapi.com/txapi/hsjz/index?key=314e9134dcf011febc2b511d1709ef12')
+    resp = requests.post('http://api.tianapi.com/txapi/hsjz/index?key=314e9134dcf011febc2b511d1709ef12')
+    if resp.text:
+        data_model = json.loads(resp.text)
+        code = data_model['code']
+        print(code)
+        if int(code) == 200:
+            for news in data_model['newslist']:
+                print(news['content'])
+
 
 if __name__ == '__main__':
     main()
