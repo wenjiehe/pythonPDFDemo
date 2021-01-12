@@ -5,4 +5,4 @@
 
 * Python版本:3.8/3.9
 
-* 涉及到的库:pdfminer3、json、requests
+* 涉及到的库:pdfminer3、json、requests、multiprocessing - Process、threading - Thread
