@@ -59,5 +59,6 @@ def main():
     end = time()
     print('总共耗费了%.3f秒' % (end - start))
 
+
 if __name__ == '__main__':
     main()
