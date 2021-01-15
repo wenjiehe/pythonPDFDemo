@@ -17,5 +17,5 @@
   - 建立线程 （threading - Thread）
   - 使用锁和线程搭配 （threading - Thread、threading - Lock）
   - 利用多进程进行数据切片
-  - 发送短信验证码（urllib.parse、http.client）：使用(互亿无线)[http://www.ihuyi.com]的接口
+  - 发送短信验证码（urllib.parse、http.client）：使用互亿无线(http://www.ihuyi.com)的接口
   
