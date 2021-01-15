@@ -5,7 +5,7 @@
 
 * Python版本:3.8/3.9
 
-* 涉及到的库:pdfminer3、json、requests、multiprocessing - Process、threading - Thread、threading - Lock、smtplib、email
+* 涉及到的库:pdfminer3、json、requests、multiprocessing - Process、threading - Thread、threading - Lock、smtplib、email、urllib.parse、http.client
 
 * 使用的功能:
 
@@ -17,4 +17,5 @@
   - 建立线程 （threading - Thread）
   - 使用锁和线程搭配 （threading - Thread、threading - Lock）
   - 利用多进程进行数据切片
+  - 发送短信验证码（urllib.parse、http.client）：使用(互亿无线)[http://www.ihuyi.com]的接口
   
